@@ -22,14 +22,14 @@ defmodule Phoenix.Mixfile do
   def application do
     [
       mod: { Phoenix, [] },
-      applications: [:cowboy, :plug]
+      applications: [:cowboy, :plug, :logger]
     ]
   end
 
   defp deps(:prod) do
     [
       {:cowboy, "~> 1.0.0", optional: true},
-      {:plug, "0.5.3"},
+      {:plug, "0.6.0"},
       {:inflex, "0.2.4"},
       {:linguist, "~> 0.1.1"},
       {:jazz, "0.2.0"},

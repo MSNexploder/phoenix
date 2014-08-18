@@ -32,7 +32,8 @@ defmodule Phoenix.Router do
 
   defmacro __before_compile__(_env) do
     quote do
-      plug Plugs.RouterLogger, Config.get([:logger, :level])
+      plug Plug.Logger
+      plug Plugs.RouterLogger
       if Config.router(__MODULE__, [:code_reload]) do
         plug Plugs.CodeReloader
       end

@@ -21,5 +21,4 @@ defmodule Phoenix.Plugs.RouterLogger do
       conn
     end)
   end
-
 end
